@@ -5,7 +5,7 @@ int main()
 	std::cout << "Group, version 0.1" << std::endl << std::endl;
 
   Group g;
-  g.cyclicGroup(4);
+  g.cyclicGroup(25);
   g.printGroup();
 
   std::cout << "The multiplication table is that of a group: " << std::endl;

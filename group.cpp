@@ -23,7 +23,7 @@ void Group::printGroup()
 }
 
 /**
- * Check if group variable (which is a multiplication table) is a group
+ * Check if group variable (which is a multiplication table) is a group. This is essentially what is known as the rearrangement theorem
  */
 bool Group::checkIfGroup()
 {
@@ -71,7 +71,10 @@ void Group::regularRepresentation()
   }
 }
 
-Eigen::Tensor<std::complex<double>, 3> pauliMatrices()
+/**
+ * Defines the Pauli matrices (poorly? stupidly?)
+ */
+Eigen::Tensor<std::complex<double>, 3> Group::pauliMatrices()
 {
   Eigen::Tensor<std::complex<double>, 3> sigma(3, 2, 2);
   std::complex<float> If(0.0f, 1.0f);

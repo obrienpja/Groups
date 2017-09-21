@@ -11,7 +11,6 @@
  * Group class
  * @author Patrick O'Brien <obrienpja@gmail.com>
  */
-
 class Group
 {
 	private:
@@ -22,4 +21,5 @@ class Group
 		Eigen::MatrixXd regularRepresentationOfElement(int ele);
     void regularRepresentation();
     void printGroup();
+    Eigen::Tensor<std::complex<double>, 3> pauliMatrices();
 };
