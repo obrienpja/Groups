@@ -15,10 +15,9 @@ int main()
   else
     std::cout << "False" << std::endl << std::endl;
 
-  for(int i = 0; i < 4; i++)
-  {
-    g.regularRepresentation(i);
-  }
+  g.regularRepresentation();
+
+  // g.regularRepresentation(0) * g.regularRepresentation(1);
 
 	return 0;
 }
