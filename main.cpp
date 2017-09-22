@@ -5,7 +5,7 @@ int main()
 	std::cout << "Group, version 0.1" << std::endl << std::endl;
 
   Group g;
-  g.cyclicGroup(8);
+  g.cyclicGroup(3);
   g.printGroup();
 
   std::cout << "The multiplication table is that of a group: " << std::endl;
@@ -16,6 +16,8 @@ int main()
     std::cout << "False" << std::endl << std::endl;
 
   g.regularRepresentation();
+	g.printPauliMatrix(2);
+  g.correctedCyclicGroup();
 
   // g.regularRepresentation(0) * g.regularRepresentation(1);
 
