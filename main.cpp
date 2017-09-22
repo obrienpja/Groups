@@ -17,7 +17,6 @@ int main()
 
   g.regularRepresentation();
 	g.printPauliMatrix(2);
-  g.correctedCyclicGroup();
 
   // g.regularRepresentation(0) * g.regularRepresentation(1);
 
