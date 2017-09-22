@@ -1,4 +1,5 @@
-#include "group.h"
+// #include "group.h"
+#include "CyclicGroup.h"
 
 int main()
 {
@@ -17,6 +18,14 @@ int main()
 
   g.regularRepresentation();
 	g.printPauliMatrix(2);
+
+	/**
+	Cyclegroup creator and method test
+
+	CyclicGroup cgroup(4);
+
+	cgroup.printGroup();
+	**/
 
   // g.regularRepresentation(0) * g.regularRepresentation(1);
 

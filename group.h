@@ -13,9 +13,8 @@
  */
 class Group
 {
-	private:
-		Eigen::MatrixXd group;
 	public:
+		Eigen::MatrixXd group;
 		int order;
     void cyclicGroup(int dim);
     bool checkIfGroup();
