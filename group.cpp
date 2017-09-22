@@ -93,3 +93,32 @@ Eigen::Tensor<std::complex<double>, 3> Group::pauliMatrices()
 
   return sigma;
 }
+
+/**
+*Get the Pauli Matrix given an index
+*/
+
+Eigen::Matrix<std::complex<double>,2,2> Group::pauliMatrix(int n)
+{
+
+  Eigen::Matrix<std::complex<double>,2,2> pauli(2,2);
+  Eigen::Tensor<std::complex<double>, 3> sigma(3, 2, 2);
+  sigma  = pauliMatrices();
+
+  for(int i = 0; i < 2; i++){
+    for (int j = 0; j < 2; j++) {
+      /* code */
+      pauli(i,j) = sigma(n,i,j);
+    }
+  }
+  return pauli;
+}
+/**
+*Print Pauli Matrix
+**/
+void Group::printPauliMatrix(int n)
+{
+  Eigen::Matrix<std::complex<double>,2,2> pauli(2,2);
+  pauli = pauliMatrix(n);
+  std::cout << "The group is: " <<std::endl <<  pauli <<std::endl;
+}

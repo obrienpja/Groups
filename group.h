@@ -22,4 +22,6 @@ class Group
     void regularRepresentation();
     void printGroup();
     Eigen::Tensor<std::complex<double>, 3> pauliMatrices();
+		Eigen::Matrix<std::complex<double>,2,2> pauliMatrix(int n);
+		void printPauliMatrix(int n);
 };

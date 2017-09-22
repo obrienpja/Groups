@@ -5,3 +5,6 @@ compile:main.cpp group.cpp
 
 run: compile
 	./main
+
+test:
+	./main
