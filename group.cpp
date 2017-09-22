@@ -67,7 +67,7 @@ void Group::regularRepresentation()
 {
   for(int l = 0; l < sqrt(group.size()); l++)
   {
-    std::cout << "The regular representation of the element is: " << std::endl << regularRepresentationOfElement(l) << std::endl << std::endl;
+    std::cout << "The regular representation of the element is: " << std::endl << regularRepresentationOfElement(0)*regularRepresentationOfElement(l) << std::endl << std::endl;
   }
 }
 
