@@ -16,7 +16,7 @@ class Group
 	public:
 		Eigen::MatrixXd group;
 		int order;
-    void cyclicGroup(int dim);
+    // void cyclicGroup(int dim); //Deprecated -- Use CyclicGroup class
     bool checkIfGroup();
 		Eigen::MatrixXd regularRepresentationOfElement(int ele);
     void regularRepresentation();

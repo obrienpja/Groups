@@ -1,5 +1,9 @@
 #include "CyclicGroup.h"
 
+/**
+*Creates multiplication table of Cyclic Group with order int dim
+* @param dim The order of the Cyclic Group
+*/
 CyclicGroup::CyclicGroup(int dim):Group(){
   order = dim;
   group.resize(dim, dim);

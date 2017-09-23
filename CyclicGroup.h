@@ -1,4 +1,5 @@
 #include "group.h"
+
 /**
 * CyclicGroup class
 * Subclass of Group
