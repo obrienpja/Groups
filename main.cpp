@@ -50,12 +50,6 @@ int main()
 	 Eigen::Matrix<std::complex<double>,2,2> pauliy = pauli.PauliMatrix(2);
 	 Eigen::Matrix<std::complex<double>,2,2> pauliz = pauli.PauliMatrix(3);
 
-	//  for (int i =0 ; i < 2; i++){
-	// 	 for( int j = 0; j < 2; j++){
-	// 		 paulix(i,j) = pauliTensor(1,i,j);
-	// 	 }
-	//  }
-
 
 	std::cout << "Pauli_x Matrix: " <<std::endl
 	  					<< paulix << std::endl;
@@ -70,6 +64,7 @@ int main()
 
 	std::cout << "Cyclic Group Hessen Decomp (Possibly Block Diagonal?):"  <<std::endl
 	  << cgroup.HDecomp(0) << std::endl;
+
 
 
 	return 0;

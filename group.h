@@ -38,7 +38,7 @@ class PauliGroup:public Group
 {
   public:
     PauliGroup();
-    // List <MatrixXd<complex<double>,2,2> PauliElements;
+    // vector <Matrix<complex<double>,2,2> > PauliElements; <-- Initialization of Elements as arrays
     Tensor <complex<double>,3> PauliTensor;
     Matrix <complex<double>,2,2> PauliMatrix(int subScript);
 
