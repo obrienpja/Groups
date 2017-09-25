@@ -1,8 +1,8 @@
 var indexSectionsWithContent =
 {
-  0: "cgpr",
-  1: "g",
-  2: "cpr",
+  0: "cghpr",
+  1: "cgp",
+  2: "chpr",
   3: "g"
 };
 

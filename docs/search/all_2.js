@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['printgroup',['printGroup',['../classGroup.html#af201fd36735a96da555ebf27a7c15bed',1,'Group']]]
+  ['hdecomp',['HDecomp',['../classCyclicGroup.html#a8268a46940b3079fbe5e30179f6fd118',1,'CyclicGroup']]]
 ];

@@ -1,4 +1,6 @@
 var annotated_dup =
 [
-    [ "Group", "classGroup.html", "classGroup" ]
+    [ "CyclicGroup", "classCyclicGroup.html", "classCyclicGroup" ],
+    [ "Group", "classGroup.html", "classGroup" ],
+    [ "PauliGroup", "classPauliGroup.html", "classPauliGroup" ]
 ];
