@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['group',['Group',['../classGroup.html',1,'']]]
+  ['cyclicgroup',['CyclicGroup',['../classCyclicGroup.html',1,'']]]
 ];

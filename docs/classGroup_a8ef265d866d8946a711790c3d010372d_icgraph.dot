@@ -1,0 +1,13 @@
+digraph "Group::regularRepresentationOfElement"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Group::regularRepresentation\lOfElement",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CyclicGroup::HDecomp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCyclicGroup.html#a8268a46940b3079fbe5e30179f6fd118"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Group::regularRepresentation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGroup.html#adfdc8e16fa708744e3b88a5bbc6e19be"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Group::correctedCyclicGroup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classGroup.html#a833274bcb0eb4392bd6dfbe3128e3568"];
+}

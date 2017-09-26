@@ -71,6 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -106,6 +107,7 @@ $(document).ready(function(){initNavTree('classGroup.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classGroup-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Group Class Reference</div>  </div>
@@ -113,17 +115,44 @@ $(document).ready(function(){initNavTree('classGroup.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="group_8h_source.html">group.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Group:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGroup__inherit__graph.png" border="0" usemap="#Group_inherit__map" alt="Inheritance graph"/></div>
+<map name="Group_inherit__map" id="Group_inherit__map">
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab5118c9a8b47a7460a6df3bd16f0b6ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGroup.html#ab5118c9a8b47a7460a6df3bd16f0b6ad">cyclicGroup</a> (int dim)</td></tr>
-<tr class="separator:ab5118c9a8b47a7460a6df3bd16f0b6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6440a5697b41ff855a616167ade4e2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGroup.html#ac6440a5697b41ff855a616167ade4e2a">checkIfGroup</a> ()</td></tr>
 <tr class="separator:ac6440a5697b41ff855a616167ade4e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc09444407c0da269704591400e64066"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGroup.html#abc09444407c0da269704591400e64066">regularRepresentation</a> (int ele)</td></tr>
-<tr class="separator:abc09444407c0da269704591400e64066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef265d866d8946a711790c3d010372d"><td class="memItemLeft" align="right" valign="top">MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGroup.html#a8ef265d866d8946a711790c3d010372d">regularRepresentationOfElement</a> (int ele)</td></tr>
+<tr class="separator:a8ef265d866d8946a711790c3d010372d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfdc8e16fa708744e3b88a5bbc6e19be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGroup.html#adfdc8e16fa708744e3b88a5bbc6e19be">regularRepresentation</a> ()</td></tr>
+<tr class="separator:adfdc8e16fa708744e3b88a5bbc6e19be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af201fd36735a96da555ebf27a7c15bed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGroup.html#af201fd36735a96da555ebf27a7c15bed">printGroup</a> ()</td></tr>
 <tr class="separator:af201fd36735a96da555ebf27a7c15bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a833274bcb0eb4392bd6dfbe3128e3568"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGroup.html#a833274bcb0eb4392bd6dfbe3128e3568">correctedCyclicGroup</a> ()</td></tr>
+<tr class="separator:a833274bcb0eb4392bd6dfbe3128e3568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea6bb78de8df116867127138d6a0ec0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acea6bb78de8df116867127138d6a0ec0"></a>
+Tensor&lt; complex&lt; double &gt;, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pauliMatrices</b> ()</td></tr>
+<tr class="separator:acea6bb78de8df116867127138d6a0ec0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9684e30b7e8142b9fa58767718a283a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9684e30b7e8142b9fa58767718a283a7"></a>
+Matrix&lt; complex&lt; double &gt;, 2, 2 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pauliMatrix</b> (int n)</td></tr>
+<tr class="separator:a9684e30b7e8142b9fa58767718a283a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f6cdc6ccb4e973edc1de9fb6ef58b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a13f6cdc6ccb4e973edc1de9fb6ef58b2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printPauliMatrix</b> (int n)</td></tr>
+<tr class="separator:a13f6cdc6ccb4e973edc1de9fb6ef58b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:adcc52fa81e6a4b616cdffe33d17d226d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adcc52fa81e6a4b616cdffe33d17d226d"></a>
+MatrixXd&#160;</td><td class="memItemRight" valign="bottom"><b>group</b></td></tr>
+<tr class="separator:adcc52fa81e6a4b616cdffe33d17d226d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a590f51fae1e6c619a8b8540c9208e751"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a590f51fae1e6c619a8b8540c9208e751"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>order</b></td></tr>
+<tr class="separator:a590f51fae1e6c619a8b8540c9208e751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classGroup.html">Group</a> class </p><dl class="section author"><dt>Author</dt><dd>Patrick O'Brien <a href="#" onclick="location.href='mai'+'lto:'+'obr'+'ie'+'npj'+'a@'+'gma'+'il'+'.co'+'m'; return false;">obrie<span style="display: none;">.nosp@m.</span>npja<span style="display: none;">.nosp@m.</span>@gmai<span style="display: none;">.nosp@m.</span>l.co<span style="display: none;">.nosp@m.</span>m</a> </dd></dl>
@@ -140,29 +169,32 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Check if group variable (which is a multiplication table) is a group </p>
+<p>Check if group variable (which is a multiplication table) is a group. This is essentially what is known as the rearrangement theorem </p>
 
 </div>
 </div>
-<a class="anchor" id="ab5118c9a8b47a7460a6df3bd16f0b6ad"></a>
+<a class="anchor" id="a833274bcb0eb4392bd6dfbe3128e3568"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Group::cyclicGroup </td>
+          <td class="memname">void Group::correctedCyclicGroup </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>dim</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add hopping contribution to the Hamiltonian </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dim</td><td>The dimension of the Hamiltonian, set by the system size </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Rearranges the multiplication table in the regular representation form </p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGroup_a833274bcb0eb4392bd6dfbe3128e3568_cgraph.png" border="0" usemap="#classGroup_a833274bcb0eb4392bd6dfbe3128e3568_cgraph" alt=""/></div>
+<map name="classGroup_a833274bcb0eb4392bd6dfbe3128e3568_cgraph" id="classGroup_a833274bcb0eb4392bd6dfbe3128e3568_cgraph">
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -178,16 +210,46 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Print the group </p>
+<p>Add hopping contribution to the Hamiltonian </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dim</td><td>The dimension of the Hamiltonian, set by the system size Print the group </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a class="anchor" id="abc09444407c0da269704591400e64066"></a>
+<a class="anchor" id="adfdc8e16fa708744e3b88a5bbc6e19be"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Eigen::MatrixXd Group::regularRepresentation </td>
+          <td class="memname">void Group::regularRepresentation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print the regular representation of the group </p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGroup_adfdc8e16fa708744e3b88a5bbc6e19be_cgraph.png" border="0" usemap="#classGroup_adfdc8e16fa708744e3b88a5bbc6e19be_cgraph" alt=""/></div>
+<map name="classGroup_adfdc8e16fa708744e3b88a5bbc6e19be_cgraph" id="classGroup_adfdc8e16fa708744e3b88a5bbc6e19be_cgraph">
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8ef265d866d8946a711790c3d010372d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Eigen::MatrixXd Group::regularRepresentationOfElement </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>ele</em></td><td>)</td>
@@ -201,6 +263,15 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classGroup_a8ef265d866d8946a711790c3d010372d_icgraph.png" border="0" usemap="#classGroup_a8ef265d866d8946a711790c3d010372d_icgraph" alt=""/></div>
+<map name="classGroup_a8ef265d866d8946a711790c3d010372d_icgraph" id="classGroup_a8ef265d866d8946a711790c3d010372d_icgraph">
+</map>
+</div>
+</p>
 
 </div>
 </div>
