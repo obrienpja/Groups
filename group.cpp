@@ -1,23 +1,5 @@
 #include "group.h"
 
-
-
-//==========================================Deprecated=====================================
-/**
- * Add hopping contribution to the Hamiltonian
- * @param dim The dimension of the Hamiltonian, set by the system size
- */
-// void Group::cyclicGroup(int dim)
-// {
-//   order = dim;
-//   group.resize(dim, dim);
-//
-//   for(int j = 0; j < dim; j++)
-//     for(int l = 0; l < dim; l++)
-//       group(l, j) = (l + j) % dim;
-// }
-//==========================================Deprecated=====================================
-
 /**
  * Print the group
  */

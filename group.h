@@ -5,13 +5,13 @@
 #include <Eigen/Eigenvalues>
 #include <unsupported/Eigen/CXX11/Tensor>
 
-// using namespace std::literals;
-
 using namespace Eigen;
 using namespace std;
+
 /**
  * Group class
  * @author Patrick O'Brien <obrienpja@gmail.com>
+ * @author Shehtab Zaman <shehtabzaman@gmail.com>
  */
 class Group
 {
@@ -27,13 +27,16 @@ class Group
     Tensor<complex<double>, 3> pauliMatrices();
 		Matrix<complex<double>,2,2> pauliMatrix(int n);
 		void printPauliMatrix(int n);
+    template <typename T>
+    void checkHermiticity(T mat);
 };
+
 /**
-* Pauli Group Class
-* Subclass of Group
-* Contains the Pauli Matrices
-*
-*/
+ * Pauli Group Class
+ * Subclass of Group
+ * Contains the Pauli Matrices
+ *
+ */
 class PauliGroup:public Group
 {
   public:
@@ -46,9 +49,9 @@ class PauliGroup:public Group
 };
 
 /**
-* Cyclic Group class
-* Subclass of Group
-*/
+ * Cyclic Group class
+ * Subclass of Group
+ */
 
 class CyclicGroup:public Group
 {
@@ -58,3 +61,5 @@ class CyclicGroup:public Group
 		 MatrixXd HDecomp(int ele);
     //Inherits other group public methods
 };
+
+#include "group.tpp"
