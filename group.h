@@ -16,17 +16,16 @@ using namespace std;
 class Group
 {
 	public:
-		MatrixXd group;
-		int order;
-    // void cyclicGroup(int dim); //Deprecated -- Use CyclicGroup class
+    MatrixXd group;
+    int order;
     bool checkIfGroup();
-		MatrixXd regularRepresentationOfElement(int ele);
+    MatrixXd regularRepresentationOfElement(int ele);
     void regularRepresentation();
     void printGroup();
     void correctedCyclicGroup();
     Tensor<complex<double>, 3> pauliMatrices();
-		Matrix<complex<double>,2,2> pauliMatrix(int n);
-		void printPauliMatrix(int n);
+    Matrix<complex<double>,2,2> pauliMatrix(int n);
+    void printPauliMatrix(int n);
     template <typename T>
     void checkHermiticity(T mat);
 };
@@ -35,7 +34,8 @@ class Group
  * Pauli Group Class
  * Subclass of Group
  * Contains the Pauli Matrices
- *
+ * @author Patrick O'Brien <obrienpja@gmail.com>
+ * @author Shehtab Zaman <shehtabzaman@gmail.com>
  */
 class PauliGroup:public Group
 {
@@ -51,8 +51,9 @@ class PauliGroup:public Group
 /**
  * Cyclic Group class
  * Subclass of Group
+ * @author Patrick O'Brien <obrienpja@gmail.com>
+ * @author Shehtab Zaman <shehtabzaman@gmail.com>
  */
-
 class CyclicGroup:public Group
 {
   public:
