@@ -1,5 +1,6 @@
 var classGroup =
 [
+    [ "checkHermiticity", "classGroup.html#a261dbd847e333dbfce3d588504b26c65", null ],
     [ "checkIfGroup", "classGroup.html#ac6440a5697b41ff855a616167ade4e2a", null ],
     [ "correctedCyclicGroup", "classGroup.html#a833274bcb0eb4392bd6dfbe3128e3568", null ],
     [ "pauliMatrices", "classGroup.html#acea6bb78de8df116867127138d6a0ec0", null ],
