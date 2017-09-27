@@ -1,7 +1,5 @@
 #include "group.h"
 
-
-
 int main()
 {
 	std::cout << "Group, version 0.1" << std::endl << std::endl;
@@ -24,9 +22,7 @@ int main()
 	std::cout << "Pauli_y Matrix: " << std::endl
 					 	  << pauliy << std::endl;
 	std::cout << "Pauli_z Matrix: " << std::endl
-							<< pauliz << std::endl;
-
-	std::cout << std::endl;
+							<< pauliz << std::endl << std::endl;
 
   g.checkHermiticity(paulix);
 
@@ -34,6 +30,8 @@ int main()
 
 	std::cout << "Cyclic Group Hessen Decomp (Possibly Block Diagonal?):"  <<std::endl
 	  << cgroup.HDecomp(0) << std::endl;
+
+  std::cout << "The Fourier factor is: " << std::endl << g.fourierFactor(.1) << std::endl;
 
 	return 0;
 }

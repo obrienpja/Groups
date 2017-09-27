@@ -5,7 +5,6 @@ using namespace std;
 
 /**
  * Creates a Pauli Group Object
- * @param none
  */
 PauliGroup::PauliGroup():Group(){
   Tensor<std::complex<double>, 3> sigma(3, 2, 2);
@@ -29,13 +28,12 @@ PauliGroup::PauliGroup():Group(){
  * Returns the n-th Pauli Matrix where n=[1,3]
  * @param subScript Sub Script for the n-th Pauli Matrix
  */
-Matrix <complex<double>,2,2> PauliGroup::PauliMatrix(int subScript){
-    Matrix<std::complex<double>,2,2> pauli;
-    for (int i =0 ; i < 2; i++){
- 		 for( int j = 0; j < 2; j++){
- 			 pauli(i,j) = PauliTensor(subScript,i,j);
- 		 }
- 	 }
-   return pauli;
+Matrix <complex<double>,2,2> PauliGroup::PauliMatrix(int subScript)
+{
+  Matrix<std::complex<double>,2,2> pauli;
+  for (int i =0 ; i < 2; i++)
+    for( int j = 0; j < 2; j++)
+      pauli(i,j) = PauliTensor(subScript,i,j);
 
+  return pauli;
 }
