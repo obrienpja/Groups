@@ -1,6 +1,23 @@
 #include "group.h"
 
 /**
+ * Group constructor
+ * @param groupVal Group that gets constructed by Group class
+ */
+ Group::Group()
+ {
+ }
+
+/**
+ * Group constructor
+ * @param groupVal Group that gets constructed by Group class
+ */
+ Group::Group(MatrixXd groupVal)
+ {
+   group = groupVal;
+ }
+
+/**
  * Print the group
  */
 void Group::printGroup()

@@ -28,6 +28,12 @@ int main()
 
 	CyclicGroup cgroup(6);
 
+  cgroup.printGroup();
+
+	Group g2(cgroup.group);
+
+	g2.printGroup();
+
 	std::cout << "Cyclic Group Hessen Decomp (Possibly Block Diagonal?):"  <<std::endl
 	  << cgroup.HDecomp(0) << std::endl;
 

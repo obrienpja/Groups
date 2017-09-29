@@ -16,6 +16,8 @@ using namespace std;
 class Group
 {
 	public:
+		Group();
+		Group(MatrixXd group);
     MatrixXd group;
     int order;
     bool checkIfGroup();
