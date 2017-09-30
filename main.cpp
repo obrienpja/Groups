@@ -4,13 +4,6 @@ int main()
 {
 	std::cout << "Group, version 0.1" << std::endl << std::endl;
 
-  Group g;
-
-  // if(g.checkIfGroup())
-  //   std::cout << "True" << std::endl << std::endl;
-  // else
-  //   std::cout << "False" << std::endl << std::endl;
-
 	PauliGroup pauli;
 
 	Eigen::Matrix<std::complex<double>,2,2> paulix = pauli.PauliMatrix(0);
@@ -24,24 +17,21 @@ int main()
 	std::cout << "Pauli_z Matrix: " << std::endl
 							<< pauliz << std::endl << std::endl;
 
-  g.checkHermiticity(paulix);
-
+	// Ask user for group size and create cyclic group for it
 	int groupSize = 0;
 	std::cout << "Please enter the size of group: " << std::endl;
 	std::cin >> groupSize;
 
 	CyclicGroup cgroup(groupSize);
-
   cgroup.printGroup();
 
-	Group g2(cgroup.group);
+	for(int i = 0; i < groupSize; i++)
+		std::cout << "Cyclic Group Hessen Decomp (Possibly Block Diagonal?):"  <<std::endl
+	  << cgroup.HDecomp(i) << std::endl;
 
-	g2.printGroup();
+	GellMann g1;
 
-	std::cout << "Cyclic Group Hessen Decomp (Possibly Block Diagonal?):"  <<std::endl
-	  << cgroup.HDecomp(0) << std::endl;
-
-  std::cout << "The Fourier factor is: " << std::endl << g.fourierFactor(.1) << std::endl;
+	g1.printGellMann(1);
 
 	return 0;
 }

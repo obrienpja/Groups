@@ -22,6 +22,6 @@ CyclicGroup::CyclicGroup(int dim):Group(){
 MatrixXd CyclicGroup::HDecomp(int ele)
 {
   HessenbergDecomposition<MatrixXd>
-  hessofGroup(regularRepresentationOfElement(ele));
+  hessofGroup(regularRepresentationOfElement(0)*regularRepresentationOfElement(ele));
   return hessofGroup.matrixH();
 }

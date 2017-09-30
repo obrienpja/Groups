@@ -51,6 +51,21 @@ class PauliGroup:public Group
 };
 
 /**
+ * Pauli Group Class
+ * Subclass of Group
+ * Contains the Pauli Matrices
+ * @author Patrick O'Brien <obrienpja@gmail.com>
+ * @author Shehtab Zaman <shehtabzaman@gmail.com>
+ */
+class GellMann:public Group
+{
+  public:
+		Eigen::Matrix<Eigen::Matrix<std::complex<double>, 3, 3>, 1, 8> gellMannMats;
+    GellMann();
+    void printGellMann(int ele);
+};
+
+/**
  * Cyclic Group class
  * Subclass of Group
  * @author Patrick O'Brien <obrienpja@gmail.com>

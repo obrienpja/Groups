@@ -25,6 +25,41 @@ PauliGroup::PauliGroup():Group(){
 };
 
 /**
+ * Creates a GellMann Group
+ */
+GellMann::GellMann():Group(){
+  complex<double> If(0.0f, 1.0f);
+
+	for(int i = 0; i < 8; i++)
+	{
+		gellMannMats(0, i) = Eigen::Matrix<std::complex<double>, 3, 3>::Zero(3, 3);
+	}
+
+  gellMannMats(0, 0)(0, 1) = 1.0;
+  gellMannMats(0, 0)(1, 0) = 1.0;
+  gellMannMats(0, 1)(0, 1) = -1.0*If;
+  gellMannMats(0, 1)(1, 0) = 1.0*If;
+  gellMannMats(0, 2)(0, 0) = 1.0;
+  gellMannMats(0, 2)(1, 1) = -1.0;
+  gellMannMats(0, 3)(0, 2) = 1.0;
+  gellMannMats(0, 3)(2, 0) = 1.0;
+  gellMannMats(0, 4)(0, 2) = -1.0*If;
+  gellMannMats(0, 4)(2, 0) = 1.0*If;
+  gellMannMats(0, 5)(1, 2) = 1.0;
+  gellMannMats(0, 5)(2, 1) = 1.0;
+  gellMannMats(0, 6)(1, 2) = -1.0*If;
+  gellMannMats(0, 6)(2, 1) = 1.0*If;
+  gellMannMats(0, 7)(0, 0) = 1.0/sqrt(3);
+  gellMannMats(0, 7)(1, 1) = 1.0/sqrt(3);
+  gellMannMats(0, 7)(2, 2) = -2.0/sqrt(3);
+};
+
+void GellMann::printGellMann(int ele)
+{
+  std::cout << std::endl << gellMannMats(0, ele) << std::endl;
+}
+
+/**
  * Returns the n-th Pauli Matrix where n=[1,3]
  * @param subScript Sub Script for the n-th Pauli Matrix
  */

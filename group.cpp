@@ -1,8 +1,7 @@
 #include "group.h"
 
 /**
- * Group constructor
- * @param groupVal Group that gets constructed by Group class
+ * Group default constructor
  */
  Group::Group()
  {
