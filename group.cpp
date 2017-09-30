@@ -83,6 +83,9 @@ void Group::correctedCyclicGroup()
   std::cout << "The proper multiplication table is: " << std::endl << regularRepresentationOfElement(0)*group << std::endl;
 }
 
+/**
+ * Fourier factor for a given angle
+ */
 std::complex<double> Group::fourierFactor(double theta)
 {
   complex<double> If(0.0f, 1.0f);

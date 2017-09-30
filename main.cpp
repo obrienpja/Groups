@@ -26,7 +26,11 @@ int main()
 
   g.checkHermiticity(paulix);
 
-	CyclicGroup cgroup(6);
+	int groupSize = 0;
+	std::cout << "Please enter the size of group: " << std::endl;
+	std::cin >> groupSize;
+
+	CyclicGroup cgroup(groupSize);
 
   cgroup.printGroup();
 

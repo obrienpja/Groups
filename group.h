@@ -26,7 +26,7 @@ class Group
     void printGroup();
     void correctedCyclicGroup();
     Tensor<complex<double>, 3> pauliMatrices();
-    Matrix<complex<double>,2,2> pauliMatrix(int n);
+    Matrix<complex<double>, 2, 2> pauliMatrix(int n);
     void printPauliMatrix(int n);
     template <typename T>
     void checkHermiticity(T mat);
