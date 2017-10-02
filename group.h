@@ -45,9 +45,10 @@ class PauliGroup:public Group
   public:
     PauliGroup();
     // vector <Matrix<complex<double>,2,2> > PauliElements; <-- Initialization of Elements as arrays
-    Tensor <complex<double>,3> PauliTensor;
-    Matrix <complex<double>,2,2> PauliMatrix(int subScript);
-    void printPauliMatrix(int subScript);
+    // Tensor <complex<double>,3> PauliTensor;
+		Eigen::Matrix<Eigen::Matrix<std::complex<double>, 2, 2>, 1, 3> pauliMats;
+		Matrix <complex<double>,2,2> PauliMatrix(int subScript);
+    // void printPauliMatrix(int subScript);
 };
 
 /**
