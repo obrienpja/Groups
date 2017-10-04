@@ -90,3 +90,14 @@ std::complex<double> Group::fourierFactor(double theta)
   complex<double> If(0.0f, 1.0f);
   return cos(theta) + If*sin(theta);
 }
+
+/**
+ * Kronecker product between matrices (just prints the result)
+ * @param mat1 First matrix in Kronecker product (coefficients)
+ * @param mat2 First matrix in Kronecker product (contained)
+ */
+void Group::kronProduct(Eigen::MatrixXcd mat1, Eigen::MatrixXcd mat2)
+{
+  std::cout << "The Kronecker product is: " << std::endl
+		<< kroneckerProduct(mat1, mat2) << std::endl;
+}

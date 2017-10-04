@@ -1,9 +1,9 @@
 #include <iostream>
-#include <typeinfo>
 #include <complex>
 #include <cmath>
 #include <Eigen/Eigenvalues>
 #include <unsupported/Eigen/CXX11/Tensor>
+#include <unsupported/Eigen/KroneckerProduct>
 
 using namespace Eigen;
 using namespace std;
@@ -31,6 +31,7 @@ class Group
     template <typename T>
     void checkHermiticity(T mat);
     complex<double> fourierFactor(double theta);
+		void kronProduct(MatrixXcd mat1, MatrixXcd mat2);
 };
 
 /**

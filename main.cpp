@@ -33,5 +33,8 @@ int main()
 
 	g1.printGellMann(1);
 
+	// std::cout << "The Kronecker product of Paulix and Pauliy is: " << std::endl
+	// 	<< kroneckerProduct(paulix, pauliy) << std::endl;
+
 	return 0;
 }
