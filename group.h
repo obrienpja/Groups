@@ -4,6 +4,8 @@
 #include <Eigen/Eigenvalues>
 #include <unsupported/Eigen/CXX11/Tensor>
 #include <unsupported/Eigen/KroneckerProduct>
+#include <vector>
+#include <set>
 
 using namespace Eigen;
 using namespace std;
@@ -19,19 +21,20 @@ class Group
 		Group();
 		Group(MatrixXd group);
     MatrixXd group;
+		MatrixXd rearrangedGroup;
     int order;
     bool checkIfGroup();
     MatrixXd regularRepresentationOfElement(int ele);
     void regularRepresentation();
     void printGroup();
     void correctedCyclicGroup();
-    Tensor<complex<double>, 3> pauliMatrices();
     Matrix<complex<double>, 2, 2> pauliMatrix(int n);
     void printPauliMatrix(int n);
     template <typename T>
     void checkHermiticity(T mat);
     complex<double> fourierFactor(double theta);
 		void kronProduct(MatrixXcd mat1, MatrixXcd mat2);
+		void printClasses(int ele);
 };
 
 /**

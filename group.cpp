@@ -79,7 +79,7 @@ void Group::regularRepresentation()
  */
 void Group::correctedCyclicGroup()
 {
-  std::cout << "The proper multiplication table is: " << std::endl << regularRepresentationOfElement(0)*group << std::endl;
+  rearrangedGroup = regularRepresentationOfElement(0)*group;
 }
 
 /**
@@ -100,4 +100,21 @@ void Group::kronProduct(Eigen::MatrixXcd mat1, Eigen::MatrixXcd mat2)
 {
   std::cout << "The Kronecker product is: " << std::endl
 		<< kroneckerProduct(mat1, mat2) << std::endl;
+}
+
+void Group::printClasses(int ele)
+{
+  correctedCyclicGroup();
+  std::set<int> conjugates;
+  std::cout << "The conjugates are: " << std::endl;
+  for(int i = 0; i < order; i++)
+  {
+    conjugates.insert(group(rearrangedGroup(i, ele), i));
+  }
+
+  for (std::set<int>::iterator it=conjugates.begin(); it!=conjugates.end(); ++it)
+    std::cout << ' ' << *it;
+
+  std::cout << std::endl << std::endl;
+  // std::cout << *conjugates << std::endl;
 }
