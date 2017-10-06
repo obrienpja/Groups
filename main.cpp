@@ -44,7 +44,22 @@ int main()
 	// for(int i = 0; i < 6; i++)
 	// 	g2.printClasses(i);
 
-	g2.printAllClasses();
+	std::set< std::set <int> > allClasses;
+	allClasses = g2.printAllClasses();
+
+	set< set<int> >::const_iterator si;
+	set<int>::const_iterator si2;
+
+	for (si = allClasses.begin(); si != allClasses.end(); ++si)
+	{
+    for (si2 = si->begin(); si2 != si->end(); ++si2)
+    {
+        cout << *si2 << " ";
+    }
+    cout << endl;
+	}
+
+	std::cout << "The number of classes is: " << allClasses.size() << std::endl;
 
 	return 0;
 }
