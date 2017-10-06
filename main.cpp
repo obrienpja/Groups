@@ -35,5 +35,16 @@ int main()
 
 	cgroup.printClasses(2);
 
+	Eigen::MatrixXd group2(6,6);
+	group2 << 0,1,2,3,4,5,1,0,4,5,2,3,2,5,0,4,3,1,3,4,5,0,1,2,4,3,1,2,5,0,5,2,3,1,0,4;
+	std::cout << "group2 is:  " << std::endl;
+	std::cout << group2 << std::endl;
+	Group g2(group2);
+
+	// for(int i = 0; i < 6; i++)
+	// 	g2.printClasses(i);
+
+	g2.printAllClasses();
+
 	return 0;
 }

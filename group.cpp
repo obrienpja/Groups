@@ -11,9 +11,10 @@
  * Group constructor
  * @param groupVal Group that gets constructed by Group class
  */
- Group::Group(MatrixXd groupVal)
+ Group::Group(Eigen::MatrixXd groupVal)
  {
    group = groupVal;
+   order = sqrt(group.size());
  }
 
 /**
@@ -102,19 +103,32 @@ void Group::kronProduct(Eigen::MatrixXcd mat1, Eigen::MatrixXcd mat2)
 		<< kroneckerProduct(mat1, mat2) << std::endl;
 }
 
-void Group::printClasses(int ele)
+std::set<int> Group::printClasses(int ele)
 {
   correctedCyclicGroup();
   std::set<int> conjugates;
   std::cout << "The conjugates are: " << std::endl;
+
   for(int i = 0; i < order; i++)
   {
     conjugates.insert(group(rearrangedGroup(i, ele), i));
   }
 
-  for (std::set<int>::iterator it=conjugates.begin(); it!=conjugates.end(); ++it)
-    std::cout << ' ' << *it;
+  return conjugates;
 
-  std::cout << std::endl << std::endl;
+  // for (std::set<int>::iterator it=conjugates.begin(); it!=conjugates.end(); ++it)
+  //   std::cout << ' ' << *it;
+  //
+  // std::cout << std::endl;
   // std::cout << *conjugates << std::endl;
+}
+
+std::set< std::set <int> > Group::printAllClasses()
+{
+  std::set< std::set <int> > classes;
+
+  for(int i = 0; i < order; i++)
+    classes.insert(printClasses(i));
+
+  return classes;
 }

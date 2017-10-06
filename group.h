@@ -34,7 +34,8 @@ class Group
     void checkHermiticity(T mat);
     complex<double> fourierFactor(double theta);
 		void kronProduct(MatrixXcd mat1, MatrixXcd mat2);
-		void printClasses(int ele);
+		set<int> printClasses(int ele);
+		std::set< std::set <int> > printAllClasses();
 };
 
 /**
