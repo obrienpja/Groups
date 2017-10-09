@@ -12,3 +12,12 @@ void Group::checkHermiticity(T mat)
   else
     std::cout <<  "false" << std::endl << std::endl;
 }
+
+template<typename T>
+struct square2
+{
+    T operator()(const T& Left, const T& Right) const
+    {
+        return (Left + Right*Right);
+    }
+};

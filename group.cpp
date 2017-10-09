@@ -23,7 +23,6 @@
 void Group::printGroup()
 {
   std::cout << "The group is: " << std::endl << group << std::endl << std::endl;
-  std::cout << "The group size is: " << std::endl << sqrt(group.size()) << std::endl << std::endl;
 }
 
 /**
@@ -31,17 +30,16 @@ void Group::printGroup()
  */
 bool Group::checkIfGroup()
 {
-  int size = sqrt(group.size());
-  for(int l = 0; l < size; l++)
+  for(int l = 0; l < order; l++)
   {
     Eigen::MatrixXd groupRow = group.row(l);
-    for(unsigned j = 0; j < size; j++)
-      for(unsigned k = j + 1; k < size; k++)
+    for(unsigned j = 0; j < order; j++)
+      for(unsigned k = j + 1; k < order; k++)
         if (groupRow(j) == groupRow(k)){return false;}
 
     Eigen::MatrixXd groupColumn = group.col(l);
-    for(unsigned j = 0; j < size; j++)
-      for(unsigned k = j + 1; k < size; k++)
+    for(unsigned j = 0; j < order; j++)
+      for(unsigned k = j + 1; k < order; k++)
         if (groupColumn(j) == groupColumn(k)){return false;}
   }
   return true;
@@ -53,12 +51,11 @@ bool Group::checkIfGroup()
  */
 Eigen::MatrixXd Group::regularRepresentationOfElement(int ele)
 {
-  int size = sqrt(group.size());
-  Eigen::MatrixXd reg(size, size);
-  reg = Eigen::MatrixXd::Zero(size, size);
+  Eigen::MatrixXd reg(order, order);
+  reg = Eigen::MatrixXd::Zero(order, order);
 
-  for(int l = 0; l < size; l++)
-    for(int j = 0; j < size; j++)
+  for(int l = 0; l < order; l++)
+    for(int j = 0; j < order; j++)
       if(group(l, j) == ele) {reg(l, j) = 1;}
 
   return reg;
@@ -69,7 +66,7 @@ Eigen::MatrixXd Group::regularRepresentationOfElement(int ele)
  */
 void Group::regularRepresentation()
 {
-  for(int l = 0; l < sqrt(group.size()); l++)
+  for(int l = 0; l < order; l++)
   {
     std::cout << "The regular representation of the element is: " << std::endl << regularRepresentationOfElement(0)*regularRepresentationOfElement(l) << std::endl << std::endl;
   }
@@ -86,11 +83,10 @@ void Group::correctedCyclicGroup()
 /**
  * Fourier factor for a given angle
  */
-std::complex<double> Group::fourierFactor(double theta)
-{
-  complex<double> If(0.0f, 1.0f);
-  return cos(theta) + If*sin(theta);
-}
+// std::complex<double> Group::fourierFactor(double theta)
+// {
+//   return cos(theta) + If*sin(theta);
+// }
 
 /**
  * Kronecker product between matrices (just prints the result)
@@ -115,12 +111,6 @@ std::set<int> Group::printClasses(int ele)
   }
 
   return conjugates;
-
-  // for (std::set<int>::iterator it=conjugates.begin(); it!=conjugates.end(); ++it)
-  //   std::cout << ' ' << *it;
-  //
-  // std::cout << std::endl;
-  // std::cout << *conjugates << std::endl;
 }
 
 std::set< std::set <int> > Group::printAllClasses()

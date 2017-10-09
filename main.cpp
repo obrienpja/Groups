@@ -47,19 +47,33 @@ int main()
 	std::set< std::set <int> > allClasses;
 	allClasses = g2.printAllClasses();
 
-	set< set<int> >::const_iterator si;
-	set<int>::const_iterator si2;
+	std::set< std::set<int> >::const_iterator si;
+	std::set<int>::const_iterator si2;
 
 	for (si = allClasses.begin(); si != allClasses.end(); ++si)
 	{
     for (si2 = si->begin(); si2 != si->end(); ++si2)
     {
-        cout << *si2 << " ";
+        std::cout << *si2 << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
 	}
 
 	std::cout << "The number of classes is: " << allClasses.size() << std::endl;
+
+	std::vector <int> v1;
+	v1.push_back(1);
+	v1.push_back(2);
+	v1.push_back(3);
+	v1.push_back(4);
+
+	int x = std::accumulate( v1.begin(), v1.end(), 0, square2<int>() );
+	// 0 stands here for initial value to which each element is in turn combined with
+	// for our case must be 0.
+
+	std::cout << "The sum of the squares is: " << x << std::endl;
+
+	std::cout << "Hello!" << std::endl;
 
 	return 0;
 }
