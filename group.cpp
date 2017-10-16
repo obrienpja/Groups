@@ -17,6 +17,41 @@
    order = sqrt(group.size());
  }
 
+ /**
+  * Return the group variable
+  */
+ Eigen::MatrixXd Group::getGroup()
+ {
+   return group;
+ }
+
+ /**
+  * Set the group variable
+  * @param groupVar Group that gets stored in the group variable
+  */
+ void Group::setGroup(Eigen::MatrixXd groupVar)
+ {
+   group = groupVar;
+ }
+
+ /**
+  * Group constructor
+  * @param groupVal Group that gets constructed by Group class
+  */
+ int Group::getOrder()
+ {
+   return order;
+ }
+
+ /**
+  * Set the order of the group
+  * @param orderVal Value that gets stored into order
+  */
+ void Group::setOrder(int orderVal)
+ {
+   order = orderVal;
+ }
+
 /**
  * Print the group
  */
@@ -103,7 +138,6 @@ std::set<int> Group::printClasses(int ele)
 {
   correctedCyclicGroup();
   std::set<int> conjugates;
-  std::cout << "The conjugates are: " << std::endl;
 
   for(int i = 0; i < order; i++)
   {

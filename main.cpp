@@ -26,7 +26,7 @@ int main()
   cgroup.printGroup();
 
 	for(int i = 0; i < groupSize; i++)
-		std::cout << "Cyclic Group Hessen Decomp (Possibly Block Diagonal?):"  <<std::endl
+		std::cout << "Cyclic Group Hessen Decomp (Possibly Block Diagonal?):"  << std::endl
 	  << cgroup.HDecomp(i) << std::endl;
 
 	GellMann g1;
@@ -72,8 +72,6 @@ int main()
 	// for our case must be 0.
 
 	std::cout << "The sum of the squares is: " << x << std::endl;
-
-	std::cout << "Hello!" << std::endl;
 
 	return 0;
 }

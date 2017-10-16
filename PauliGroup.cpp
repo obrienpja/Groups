@@ -1,34 +1,10 @@
 #include "group.h"
 
-using namespace Eigen;
-using namespace std;
-
-// /**
-//  * Creates a Pauli Group Object
-//  */
-// PauliGroup::PauliGroup():Group(){
-//   Tensor<std::complex<double>, 3> sigma(3, 2, 2);
-//   complex<float> If(0.0f, 1.0f);
-//   sigma(0,0,0) = 0.0f;
-//   sigma(0,0,1) = 1.0f;
-//   sigma(0,1,0) = 1.0f;
-//   sigma(0,1,1) = 0.0f;
-//   sigma(1,0,0) = 0.0f;
-//   sigma(1,0,1) = -1.0f*If;
-//   sigma(1,1,0) = 1.0f*If;
-//   sigma(1,1,1) = 0.0f;
-//   sigma(2,0,0) = 1.0f;
-//   sigma(2,0,1) = 0.0f;
-//   sigma(2,1,0) = 0.0f;
-//   sigma(2,1,1) = -1.0f;
-//   PauliTensor = sigma;
-// };
-
 /**
  * PauliGroup constructor
  */
 PauliGroup::PauliGroup():Group(){
-  complex<double> If(0.0f, 1.0f);
+  std::complex<double> If(0.0f, 1.0f);
 
   for(int i = 0; i < 3; i++)
   {
@@ -44,7 +20,7 @@ PauliGroup::PauliGroup():Group(){
 };
 
 /**
- * Returns a Pauli matrixH
+ * Returns a Pauli matrix
  * @param subScript number in [0,2] that gives the x, y, or z Pauli matrix
  */
 Eigen::Matrix<std::complex<double>, 2, 2> PauliGroup::PauliMatrix(int subScript)
@@ -56,7 +32,7 @@ Eigen::Matrix<std::complex<double>, 2, 2> PauliGroup::PauliMatrix(int subScript)
  * Creates a GellMann Group
  */
 GellMann::GellMann():Group(){
-  complex<double> If(0.0f, 1.0f);
+  std::complex<double> If(0.0f, 1.0f);
 
 	for(int i = 0; i < 8; i++)
 	{

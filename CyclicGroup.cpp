@@ -7,11 +7,13 @@ using namespace Eigen;
  * @param dim The order of the Cyclic Group
  */
 CyclicGroup::CyclicGroup(int dim):Group(){
-  order = dim;
-  group.resize(dim, dim);
+  setOrder(dim);
+  Eigen::MatrixXd groupStore;
+  groupStore.resize(dim, dim);
   for(int j = 0; j < dim; j++)
     for(int l = 0; l < dim; l++)
-      group(l, j) = (l + j) % dim;
+      groupStore(l, j) = (l + j) % dim;
+  setGroup(groupStore);
 };
 
 /**
@@ -21,7 +23,7 @@ CyclicGroup::CyclicGroup(int dim):Group(){
  */
 MatrixXd CyclicGroup::HDecomp(int ele)
 {
-  HessenbergDecomposition<MatrixXd>
+  HessenbergDecomposition<Eigen::MatrixXd>
   hessofGroup(regularRepresentationOfElement(0)*regularRepresentationOfElement(ele));
   return hessofGroup.matrixH();
 }

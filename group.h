@@ -18,21 +18,20 @@ class Group
 	public:
 		Group();
 		Group(Eigen::MatrixXd group);
-    Eigen::MatrixXd group;
-		Eigen::MatrixXd rearrangedGroup;
-    int order;
-		// std::complex<double> If = std::complex<double>{0.0, 1.0};
-
-    bool checkIfGroup();
-    Eigen::MatrixXd regularRepresentationOfElement(int ele);
-    void regularRepresentation();
-    void printGroup();
-    void correctedCyclicGroup();
-    Eigen::Matrix<std::complex<double>, 2, 2> pauliMatrix(int n);
-    void printPauliMatrix(int n);
+		Eigen::MatrixXd getGroup();
+		void setGroup(Eigen::MatrixXd groupVar);
+		int getOrder();
+		void setOrder(int orderVal);
+		bool checkIfGroup();
+		Eigen::MatrixXd regularRepresentationOfElement(int ele);
+		void regularRepresentation();
+		void printGroup();
+		void correctedCyclicGroup();
+		Eigen::Matrix<std::complex<double>, 2, 2> pauliMatrix(int n);
+		void printPauliMatrix(int n);
 
 		template <typename T>
-    void checkHermiticity(T mat);
+		void checkHermiticity(T mat);
 
 		std::complex<double> fourierFactor(double theta);
 		void kronProduct(Eigen::MatrixXcd mat1, Eigen::MatrixXcd mat2);
@@ -41,6 +40,11 @@ class Group
 
 		template<typename T>
 		struct square2{};
+
+	private:
+		Eigen::MatrixXd group;
+		Eigen::MatrixXd rearrangedGroup;
+	  int order;
 };
 
 /**
